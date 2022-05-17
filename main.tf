@@ -11,12 +11,12 @@ resource "null_resource" "test" {
     value = "${timestamp()}"
   }
   provisioner "local-exec" {
-    command = "python hello.py"
+    command = "python3 hello.py"
   }
 }
 
 
-resource "null_resource" "VM-01" {
+resource "null_resource" "VM-02" {
   provisioner "local-exec" {
     command = "echo ${var.execution}"
   }
