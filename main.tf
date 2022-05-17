@@ -1,11 +1,3 @@
-resource "null_resource" "VM-01" {
-  provisioner "local-exec" {
-    command = "python --version"
-  }
-}
-
-
-
 resource "null_resource" "test" {
   triggers = {
     value = "${timestamp()}"
